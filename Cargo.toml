@@ -1,0 +1,17 @@
+[package]
+name = "polkadot_sig_verifier"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]  # Creates a C-compatible dynamic library
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
+
+[dependencies]
+hex = "0.4.3"
+sp-core = "38.1.0"
